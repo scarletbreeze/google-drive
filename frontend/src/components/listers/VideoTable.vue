@@ -67,7 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "field", value: "field" },
+                    { text: "fileId", value: "fileId" },
                     { text: "url", value: "url" },
                 ],
             video : [],
@@ -86,7 +86,7 @@
             this.values = temp.data._embedded.videos;
 
             this.newValue = {
-                'field': '',
+                'fileId': '',
                 'url': '',
             }
         },

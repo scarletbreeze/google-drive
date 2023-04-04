@@ -15,7 +15,7 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                Field :  {{item.field }}
+                                FileId :  {{item.fileId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Keywords :  {{item.keywords }}

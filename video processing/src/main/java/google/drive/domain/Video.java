@@ -16,7 +16,7 @@ public class Video {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String field;
+    private String fileId;
 
     private String url;
 

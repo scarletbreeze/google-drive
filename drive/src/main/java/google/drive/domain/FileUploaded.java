@@ -12,8 +12,8 @@ public class FileUploaded extends AbstractEvent {
     private Long id;
     private String name;
     private String path;
-    private Integer size;
     private String type;
+    private Integer size;
 
     public FileUploaded(File aggregate) {
         super(aggregate);

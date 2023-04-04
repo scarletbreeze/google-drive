@@ -2,7 +2,7 @@
 
     <v-data-table
         :headers="headers"
-        :items="dashBoard"
+        :items="dashboard"
         :items-per-page="5"
         class="elevation-1"
     ></v-data-table>
@@ -13,7 +13,7 @@
     const axios = require('axios').default;
 
     export default {
-        name: 'DashBoardView',
+        name: 'DashboardView',
         props: {
             value: Object,
             editMode: Boolean,
@@ -25,18 +25,18 @@
                 { text: "size", value: "size" },
                 { text: "name", value: "name" },
                 { text: "path", value: "path" },
-                { text: "isindexed", value: "isindexed" },
+                { text: "isIndexed", value: "isIndexed" },
                 { text: "isUploaded", value: "isUploaded" },
                 { text: "videoUrl", value: "videoUrl" },
             ],
-            dashBoard : [],
+            dashboard : [],
         }),
           async created() {
-            var temp = await axios.get(axios.fixUrl('/dashBoards'))
+            var temp = await axios.get(axios.fixUrl('/dashboards'))
 
-            temp.data._embedded.dashBoards.map(obj => obj.id=obj._links.self.href.split("/")[obj._links.self.href.split("/").length - 1])
+            temp.data._embedded.dashboards.map(obj => obj.id=obj._links.self.href.split("/")[obj._links.self.href.split("/").length - 1])
 
-            this.dashBoard = temp.data._embedded.dashBoards;
+            this.dashboard = temp.data._embedded.dashboards;
         },
         methods: {
         }

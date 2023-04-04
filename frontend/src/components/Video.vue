@@ -17,7 +17,7 @@
         </v-card-title >
 
         <v-card-text>
-            <String label="Field" v-model="value.field" :editMode="editMode"/>
+            <String label="FileId" v-model="value.fileId" :editMode="editMode"/>
             <String label="Url" v-model="value.url" :editMode="editMode"/>
         </v-card-text>
 

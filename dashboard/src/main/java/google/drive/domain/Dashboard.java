@@ -6,9 +6,9 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "DashBoard_table")
+@Table(name = "Dashboard_table")
 @Data
-public class DashBoard {
+public class Dashboard {
 
     @Id
     //@GeneratedValue(strategy=GenerationType.AUTO)
@@ -17,7 +17,7 @@ public class DashBoard {
     private Integer size;
     private String name;
     private String path;
-    private Boolean isindexed;
+    private Boolean isIndexed;
     private Boolean isUploaded;
     private String videoUrl;
 }

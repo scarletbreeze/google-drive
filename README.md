@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/courses/cna-full/8fd61270-c481-11ed-ad36-1bfd28bd1d42/ddd-google-drive
+www.msaez.io/#/storming/google-drive_194149
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -40,11 +40,11 @@ mvn spring-boot:run
 ```
 - indexer
 ```
- http :8088/indices id="id" field="field" keywords="keywords" 
+ http :8088/indices id="id" fileId="fileId" keywords="keywords" 
 ```
 - video processing
 ```
- http :8088/videos id="id" field="field" url="url" 
+ http :8088/videos id="id" fileId="fileId" url="url" 
 ```
 - notification
 ```

@@ -1,7 +1,7 @@
 package google.drive.domain;
 
 import google.drive.IndexerApplication;
-import google.drive.domain.Fileindexed;
+import google.drive.domain.FileIndexed;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
@@ -16,15 +16,15 @@ public class Index {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String field;
+    private Long fileId;
 
     @ElementCollection
     private List<String> keywords;
 
     @PostPersist
     public void onPostPersist() {
-        Fileindexed fileindexed = new Fileindexed(this);
-        fileindexed.publishAfterCommit();
+        FileIndexed fileIndexed = new FileIndexed(this);
+        fileIndexed.publishAfterCommit();
     }
 
     public static IndexRepository repository() {
@@ -39,8 +39,8 @@ public class Index {
         Index index = new Index();
         repository().save(index);
 
-        Fileindexed fileindexed = new Fileindexed(index);
-        fileindexed.publishAfterCommit();
+        FileIndexed fileIndexed = new FileIndexed(index);
+        fileIndexed.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -50,8 +50,8 @@ public class Index {
             index // do something
             repository().save(index);
 
-            Fileindexed fileindexed = new Fileindexed(index);
-            fileindexed.publishAfterCommit();
+            FileIndexed fileIndexed = new FileIndexed(index);
+            fileIndexed.publishAfterCommit();
 
          });
         */

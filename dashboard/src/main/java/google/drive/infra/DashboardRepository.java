@@ -6,8 +6,8 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(
-    collectionResourceRel = "dashBoards",
-    path = "dashBoards"
+    collectionResourceRel = "dashboards",
+    path = "dashboards"
 )
-public interface DashBoardRepository
-    extends PagingAndSortingRepository<DashBoard, Long> {}
+public interface DashboardRepository
+    extends PagingAndSortingRepository<Dashboard, Long> {}

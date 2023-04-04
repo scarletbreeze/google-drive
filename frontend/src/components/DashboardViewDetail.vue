@@ -2,7 +2,7 @@
 
     <v-card outlined>
         <v-card-title>
-            DashBoard # {{$route.params.id }}
+            Dashboard # {{$route.params.id }}
         </v-card-title>
 
         <v-card-text>
@@ -16,7 +16,7 @@
                 <String label="Path" v-model="item.path" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Boolean label="Isindexed" v-model="item.isindexed" :editMode="editMode" @change="change" />
+                <Boolean label="IsIndexed" v-model="item.isIndexed" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Boolean label="IsUploaded" v-model="item.isUploaded" :editMode="editMode" @change="change" />
@@ -33,7 +33,7 @@
   const axios = require('axios').default;
 
   export default {
-    name: 'DashBoardViewDetail',
+    name: 'DashboardViewDetail',
     props: {
       value: Object,
     },
@@ -42,7 +42,7 @@
     }),
     async created() {
       var params = this.$route.params;
-      var temp = await axios.get(axios.fixUrl('/dashBoards/' + params.id))
+      var temp = await axios.get(axios.fixUrl('/dashboards/' + params.id))
 
       this.item = temp.data;
 

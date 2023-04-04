@@ -23,12 +23,27 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='FileUploaded'"
     )
-    public void wheneverFileUploaded_UserNotice(
+    public void wheneverFileUploaded_UserNoti(
         @Payload FileUploaded fileUploaded
     ) {
         FileUploaded event = fileUploaded;
         System.out.println(
-            "\n\n##### listener UserNotice : " + fileUploaded + "\n\n"
+            "\n\n##### listener UserNoti : " + fileUploaded + "\n\n"
+        );
+        // Sample Logic //
+
+    }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='VideoProcessed'"
+    )
+    public void wheneverVideoProcessed_UserNoti(
+        @Payload VideoProcessed videoProcessed
+    ) {
+        VideoProcessed event = videoProcessed;
+        System.out.println(
+            "\n\n##### listener UserNoti : " + videoProcessed + "\n\n"
         );
         // Sample Logic //
 

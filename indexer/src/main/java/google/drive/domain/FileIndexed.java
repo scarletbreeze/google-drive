@@ -7,17 +7,17 @@ import lombok.*;
 
 @Data
 @ToString
-public class Fileindexed extends AbstractEvent {
+public class FileIndexed extends AbstractEvent {
 
     private Long id;
-    private String field;
+    private String fileId;
     private List<String> keywords;
 
-    public Fileindexed(Index aggregate) {
+    public FileIndexed(Index aggregate) {
         super(aggregate);
     }
 
-    public Fileindexed() {
+    public FileIndexed() {
         super();
     }
 }
